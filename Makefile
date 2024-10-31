@@ -1,6 +1,7 @@
-build:
-	cargo build
-test:
-	cargo test
-watch:
-	watchman-make -p 'src/**/*.rs' -t build -p 'test/**/*.rs' -t test
+run-tests: tests
+	./tests
+
+tests: cssparser.rs
+	rustc --test $< -o $@
+
+.PHONY: run-tests

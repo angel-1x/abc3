@@ -1,1 +1,4 @@
-tests
+target
+Cargo.lock
+*.log
+.gdb_history
